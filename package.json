@@ -5,7 +5,7 @@
     "build:backend": "cd app-django && pip3 install -r requirements.txt",
     "build:frontend": "cd app-react && npm install && npm run build",
     "build": "npm run build:backend & npm run build:frontend",
-    "start:backend": "cd app-django && python3 app-django/manage.py runserver",
+    "start:backend": "cd app-django && python3 manage.py runserver",
     "start:frontend": "cd app-react &&  npm run start",
     "start": "npm run start:backend & npm run start:frontend",
     "test:backend": "cypress run --spec 'cypress/integration/backend.spec.js'",
