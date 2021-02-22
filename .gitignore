@@ -1,0 +1,5 @@
+node_modules/
+cypress/plugins
+cypress/support
+.idea
+app-django/app/__pycache__/
