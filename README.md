@@ -6,7 +6,6 @@
 - Django
 - Cypress
 - GitHub Actions
-- 
 
 ---
 
