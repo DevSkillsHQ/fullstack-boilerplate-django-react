@@ -28,7 +28,7 @@ GET /max_transaction_volume
     returns max amount of transactions and the corresponding  list of account_ids
 
 Input parameters for all calls are being validated as well as post body.
-Validation cafeterias are - missing, incorrect type, empty
+Validation criteria are - missing, incorrect type, empty
 
 
 DB schema
