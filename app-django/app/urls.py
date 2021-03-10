@@ -15,9 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.decorators.csrf import csrf_exempt
+
 from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ping', views.ping, name='ping'),
+    # TODO csrf_exempt will be removed
+    path('amount', csrf_exempt(views.Transaction.as_view()), name='amount'),  # set transaction ,
+    path('transaction/<str:transactionId>', views.Transaction.as_view(), name='transaction'),  # get transaction
+    path('balance/<str:accountId>', views.getBalance, name='balance'),  # get balance
+    # get all accounts with max number of transactions
+    path('max_transaction_volume', views.getMaxTransactionVolume, name='max_transaction_volume'),
 ]
