@@ -17,6 +17,7 @@ POST /amount
     updates user's balance by the given amount and adds a transaction entry in transaction table
     2 db transactions are done in atomic way, If both queries are successfully completed, the changes will be committed.
     If there is an exception, the changes are rolled back.
+    If the account id not present will not create an account and will return error status
 
 GET /transaction/{transaction_id}
     returns transaction details for the given transaction_id
