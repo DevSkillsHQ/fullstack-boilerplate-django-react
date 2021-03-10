@@ -87,15 +87,15 @@ class Transaction(APIView):
         else:
             return HttpResponse("Empty request body", status=status.HTTP_400_BAD_REQUEST)
 
-
-@staticmethod
-def get(request, transactionId):
-    if ValidationService.checkUUID(transactionId):
-        transaction = ManagementService.getTransactionById(transactionId)
-        if transaction is not None:
-            return HttpResponse(str(transaction), status=status.HTTP_200_OK)
+    @staticmethod
+    def get(request, transactionId):
+        if ValidationService.checkUUID(transactionId):
+            transaction = ManagementService.getTransactionById(transactionId)
+            if transaction is not None:
+                return HttpResponse(json.dumps({"account_id": transaction.id, "amount": transaction.amount}),
+                                    status=status.HTTP_200_OK)
+            else:
+                return HttpResponse("Transaction not found", status=status.HTTP_404_NOT_FOUND)
         else:
-            return HttpResponse("Transaction not found", status=status.HTTP_404_NOT_FOUND)
-    else:
-        return HttpResponse("Invalid UUID",
-                            status=status.HTTP_400_BAD_REQUEST)
+            return HttpResponse("Invalid UUID",
+                                status=status.HTTP_400_BAD_REQUEST)
