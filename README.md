@@ -1,4 +1,4 @@
-# Fulstack Boilerplate
+# Fullstack Boilerplate
 
 - React 11
 - create-react-app
