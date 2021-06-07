@@ -1,8 +1,8 @@
 # Backend Boilerplate Python Django
 
-## Project Structure
+## Project Code
 
-TBD
+The project code is located under `app-backend/`.
 
 ## Getting started
 
