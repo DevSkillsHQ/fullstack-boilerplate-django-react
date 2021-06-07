@@ -2,11 +2,11 @@
   "name": "account-management-fullstack-level-3",
   "version": "0.0.1",
   "scripts": {
-    "build:backend": "cd app-django && pip3 install -r requirements.txt",
-    "build:frontend": "cd app-react && npm install && npm run build",
+    "build:backend": "cd app-backend && pip3 install -r requirements.txt && python3 manage.py migrate",
+    "build:frontend": "cd app-frontend && npm install && npm run build",
     "build": "npm run build:backend & npm run build:frontend",
-    "start:backend": "cd app-django && python3 manage.py runserver",
-    "start:frontend": "cd app-react &&  npm run start",
+    "start:backend": "cd app-backend && python3 manage.py runserver",
+    "start:frontend": "cd app-frontend &&  npm run start",
     "start": "npm run start:backend & npm run start:frontend",
     "test": "cypress run"
   },

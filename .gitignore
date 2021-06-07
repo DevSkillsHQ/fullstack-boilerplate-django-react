@@ -1,5 +1,6 @@
 node_modules/
 cypress/plugins
 cypress/support
+cypress/videos
 .idea
-app-django/app/__pycache__/
+app-backend/app/__pycache__/
