@@ -8,15 +8,15 @@ import TransactionList from '../components/TransactionList';
 
 export default function Home() {
   return (
-    <div className='flex flex-col justify-center  min-h-screen py-2 px-2  bg-gray-600 '>
+    <div className='flex flex-col justify-center  min-h-screen py-2 px-2  bg-slate-500-gray-600 '>
       <Head>
         <title>Frontend Boilerplate React</title>
       </Head>
       <main className='flex flex-col  max-w-full'>
-        {/* <Hero /> */}
+        <Hero />
         {/* <Tile /> */}
-        <AddTransaction/>      
-        
+        {/* <AddTransaction/>   */}
+
       </main>
       <Footer />
     </div>

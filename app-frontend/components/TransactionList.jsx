@@ -30,7 +30,6 @@ const TransactionList = ({transaction}) => {
       fetchData(); 
      }, [transaction]);   
 
-     
      return (
     <div className='container mx-auto my-8'>
         <h2 className='font-bold text-lg text-left mb-5 text-pink-800 px-6 py-3'>All Transactions List</h2>
@@ -41,8 +40,8 @@ const TransactionList = ({transaction}) => {
                     <th className='text-left font-medium font-bold text-black-500 uppercase tracking-wide px-3 py-6'>AccountId</th>
                     <th className='text-left font-medium font-bold text-black-500 uppercase tracking-wide px-3 py-6'>Amount</th>
                     <th className='text-left font-medium font-bold text-black-500 uppercase tracking-wide px-3 py-6'>Date</th>
-                    <th className='text-right font-medium font-bold text-black-500 uppercase tracking-wide px-3 py-6'>Balance</th>
-                    <th className='text-right font-medium font-bold text-black-500 uppercase tracking-wide px-3 py-6'>Actions</th>
+                    <th className='text-right font-medium font-bold text-black-500 uppercase tracking-wide px-3 py-6'>Status</th>
+                    {/* <th className='text-right font-medium font-bold text-black-500 uppercase tracking-wide px-3 py-6'>Deposit</th> */}
                 </tr>
             </thead>
             {!loading &&( 

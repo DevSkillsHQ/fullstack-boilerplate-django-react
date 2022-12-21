@@ -50,6 +50,7 @@ const AddTransaction = () => {
         setResponseTransaction(_transaction);
         reset(e);
     }
+    
     const reset = (e) => {
         e.preventDefault();
         setTransaction({

@@ -1,4 +1,5 @@
 import React from 'react'
+import TransactionList from './TransactionList'
 
 const Transaction=({transaction}) => {
 
@@ -14,12 +15,12 @@ const Transaction=({transaction}) => {
                 <td className='text-left px-6 py-4 whitespace-nowrap'>
                   <div className='text-sm text-gray-900 font-bold'>{transaction.created_at} </div> 
                 </td>   
-                <td className='text-left px-6 py-4 whitespace-nowrap'>
-                  <div className='text-sm text-gray-900 font-bold'>{transaction.balance} </div> 
+                {/* <td className='text-left px-6 py-4 whitespace-nowrap'>
+                  <div className='text-sm text-gray-900 font-bold'>{transaction.negativeAmount} </div> 
                 </td>           
-                {/* <td className='text-right px-6 py-4 whitespace-nowrap'>
-                  <a onClick={(e,id)=>getBalance(e,account_id)} className='text-indigo-500 hover:text-indigo-800 hover:cursor-pointer px-5 font-bold'> GetCurrentAccountbalance</a>
-                 </td> */}
+                <td className='text-left px-6 py-4 whitespace-nowrap'>
+                  <div className='text-sm text-gray-900 font-bold'>{transaction.positiveAmount} </div> 
+                </td> */}
               </tr>
                 )
 }
