@@ -1,19 +1,22 @@
-import Head from 'next/head'
+ import Head from 'next/head'
+import AddTransaction from '../components/AddTransaction';
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Tile from "../components/Tile";
+import TransactionHistory from '../components/TransactionHistory';
+import TransactionList from '../components/TransactionList';
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className='flex flex-col justify-center  min-h-screen py-2 px-2  bg-gray-600 '>
       <Head>
         <title>Frontend Boilerplate React</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <Hero />
-        <Tile />
+      <main className='flex flex-col  max-w-full'>
+        {/* <Hero /> */}
+        {/* <Tile /> */}
+        <AddTransaction/>      
+        
       </main>
       <Footer />
     </div>
