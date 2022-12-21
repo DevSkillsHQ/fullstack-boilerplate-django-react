@@ -56,8 +56,7 @@ const reset = (e) => {
 
   return (  
     <>      
-    <div className="container mx-auto my-8 flex ">  
-       
+    <div className="container mx-auto my-6 flex ">         
 {/*********************************Section for new transaction form******************************************************/}
     
     <div className="w-2/6 p-5 bg-gray-300  rounded-tl-2xl rounded-bl-2x ">
@@ -93,7 +92,6 @@ const reset = (e) => {
          onClick={addTransaction}>Submit</button>         
     </div>
   </form>  
-
    {/*********************************Section for transaction history******************************************************/} 
     </div>   
     <TransactionHistory transaction={responseTransaction}/> 
