@@ -28,7 +28,6 @@ const handleChange = (e) =>{
       const value = e.target.value;
       setTransaction({...transaction,[e.target.name]: value});
   }; 
-
 const addTransaction = async (e) => {
   e.preventDefault();
   const response = await fetch(USER_API_BASE_URL,{
@@ -56,7 +55,8 @@ const reset = (e) => {
 
   return (  
     <>      
-    <div className="container mx-auto my-6 flex ">         
+    <div className="container mx-auto my-6 flex ">     
+
 {/*********************************Section for new transaction form******************************************************/}
     
     <div className="w-2/6 p-5 bg-gray-300  rounded-tl-2xl rounded-bl-2x ">
