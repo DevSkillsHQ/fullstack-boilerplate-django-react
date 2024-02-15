@@ -33,14 +33,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Start daemon
-        run: npm run start &
       - name: Run tests
-        run: npm run test
+        uses: cypress-io/github-action@v5
+        with:
+          build: npm run build
+          start: npm run start
+          wait-on: 'npx wait-on --timeout 60000 http://localhost:3000'
 
   check-dependabot:
     needs:
