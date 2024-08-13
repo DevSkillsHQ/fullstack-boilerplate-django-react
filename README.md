@@ -11,10 +11,10 @@ A backbone for your coding challenge.
 
 ## Tech Stack
 
-- React 18
+- React
 - Vite
 - Vitest
-- Python 3
+- Python
 - Django
 - Cypress
 - GitHub Actions
