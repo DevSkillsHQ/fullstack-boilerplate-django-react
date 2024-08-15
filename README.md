@@ -4,34 +4,18 @@ A backbone for your coding challenge.
 
 ## Contents
 
-- [Backend service](app-backend) - a Django service with a `/ping` endpoint.
-- [Frontend app](app-frontend) - a React/NextJS app.
-- [E2E test suites](cypress/integration) - a backend and a frontend Cypress test suites. Extend with your tests.
-- [Pipeline](.github/workflows/tests.yml) - a test Runner that executes the Cypress tests on push to a branch other than `master`/`main`.
+- [Backend service](app-backend) - a Django service with a `/ping` endpoint. Extend with your code.
+- [Frontend app](app-frontend) - a React app. Extend with your code.
+- [E2E test suites](cypress/e2e) - a backend and a frontend Cypress test suites. Extend with your tests.
+
 
 ## Tech Stack
 
-### Backend
-
-- Django 3.1.5
-
-#### Additional libs
-
-- sqlite3 (SQLite connection)
-- django-cors-headers (CORS support)
-
-### Frontend
-
-- Next 10
-- React 17
-
-#### Additional libs
-
-- tailwindcss 2 (css)
-- DOM/React Testing Library / Jest (testing)
-
-### Misc
-
+- React
+- Vite
+- Vitest
+- Python
+- Django
 - Cypress
 - GitHub Actions
 
@@ -45,28 +29,27 @@ A backbone for your coding challenge.
 
 ```bash
 npm install
-npm run build # both Django backend and Next frontend
+npm run build # both Django backend and React frontend
 npm run build:backend # only Django backend
-npm run build:frontend # only Next frontend
+npm run build:frontend # only React frontend
 ```
 
 4. Start your app.
 
 ```bash
 npm install
-npm run start # both Django backend and Next frontend
+npm run start # both Django backend and React frontend
 npm run start:backend # only Django backend
-npm run start:frontend # only Next frontend
+npm run start:frontend # only React frontend
 ```
 
 5. Run the Cypress tests.
 
 ```bash
-npm run test # run project tests under `cypress/integration`
+npm run test # run project tests under `cypress/e2e`
 ```
 
 ---
 
-Made by [DevSkills](https://devskills.co).
+Authored by [Alva Labs](https://www.alvalabs.io/).
 
-Did you find this repo useful? **Give us a shout on [Twitter](https://twitter.com/DevSkillsHQ) / [LinkedIn](https://www.linkedin.com/company/devskills)**.
