@@ -14,6 +14,8 @@ jobs:
   test-for-workflow:
     name: Alva test workflow
     uses: DevSkillsHQ/publish-test-results-workflow/.github/workflows/publish-test-results.yml@main
+    with:
+      python_version: '3.14'
   
   # Verifies the boilerplate can start and run in codespace environment
   test-for-codespaces:
